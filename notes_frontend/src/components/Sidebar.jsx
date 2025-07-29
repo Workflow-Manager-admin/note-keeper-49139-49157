@@ -5,6 +5,7 @@ import React from 'react';
  * Sidebar component for filters/search/categories on the notes app.
  */
 function Sidebar({ children }) {
+  // Just render children from parent. Remove stubs.
   return (
     <aside style={{
       width: 220,
@@ -15,24 +16,7 @@ function Sidebar({ children }) {
       boxSizing: 'border-box',
       flexShrink: 0,
     }}>
-      {children || (
-        <div>
-          {/* Placeholders for future search/filter controls */}
-          <input
-            type="search"
-            placeholder="Search notes..."
-            style={{
-              width: '100%',
-              padding: '0.4rem',
-              borderRadius: 4,
-              border: '1px solid var(--border-color)',
-              marginBottom: 14,
-              marginTop: 6,
-            }}
-          />
-          <div style={{ color: 'var(--text-secondary)' }}>[Filters / Categories Here]</div>
-        </div>
-      )}
+      {children}
     </aside>
   );
 }
